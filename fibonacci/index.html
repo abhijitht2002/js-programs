@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script>
+		function fibonacciGenerator(n){
+
+    		let series = []
+
+		    for(let i = 0; i < n; i++){
+
+		        if(i<2){
+		            series.push(i)
+		        }else{
+		            series.push(series[i-1]+series[i-2])
+		        }
+		        
+		    }
+
+		    return series
+		}		
+
+		const series = fibonacciGenerator(10)
+		console.log(series)
+	</script>
+</body>
+</html>
