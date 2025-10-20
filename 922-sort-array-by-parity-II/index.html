@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      arr = [1, 2, 3, 4];
+
+      // solution 1
+      const sortArrayByParityII = (input) => {
+        
+        console.log("array: " + input);
+        
+        let res = [];
+        let evenArr = [];
+        let oddArr = [];
+
+        for (let i = 0; i < input.length; i++) {
+          if (input[i] % 2 === 0) {
+            evenArr.push(input[i]);
+          } else {
+            oddArr.push(input[i]);
+          }
+        }
+
+        let evenIndex = 0;
+        for (let i = 0; i < evenArr.length; i++) {
+          res[evenIndex] = evenArr[i];
+          evenIndex += 2;
+        }
+
+        let oddIndex = 1;
+        for (let i = 0; i < oddArr.length; i++) {
+          res[oddIndex] = oddArr[i];
+          oddIndex += 2;
+        }
+
+        console.log("sorted array: " + res);
+        return res;
+      };
+
+      sortArrayByParityII(arr);
+    </script>
+  </body>
+</html>
